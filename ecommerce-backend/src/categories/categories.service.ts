@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, ILike, IsNull } from 'typeorm';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { Category } from './entities/category.entity';
@@ -26,7 +26,10 @@ export class CategoriesService {
   }
 
   findAll() {
-    return this.categoryRepository.find({ relations: ['children'] });
+    return this.categoryRepository.find({
+      where: { parent: IsNull() },
+      relations: ['children'],
+    });
   }
 
   async findOne(id: number) {
@@ -60,5 +63,22 @@ export class CategoriesService {
   async remove(id: number) {
     const category = await this.findOne(id);
     return this.categoryRepository.remove(category);
+  }
+
+  async search(query: string) {
+    const results = await this.categoryRepository.find({
+      where: [
+        { name: ILike(`%${query}%`) },
+        { description: ILike(`%${query}%`) },
+      ],
+      relations: ['children', 'parent'],
+    });
+
+    // Filter out categories if their parent is also in the results
+    return results.filter(category => {
+      if (!category.parent) return true;
+      const parentInResults = results.some(r => r.id === category.parent!.id);
+      return !parentInResults;
+    });
   }
 }

@@ -123,6 +123,27 @@ curl -X GET http://localhost:3000/categories
 ]
 ```
 
+### Search Categories
+**Endpoint:** `GET /categories/search`
+
+**cURL Request:**
+```bash
+curl -X GET "http://localhost:3000/categories/search?q=electronics"
+```
+
+**Dummy Response:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronic items and gadgets",
+    "parentId": null,
+    "children": []
+  }
+]
+```
+
 ### Get One Category
 **Endpoint:** `GET /categories/:id`
 

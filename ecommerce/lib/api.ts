@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { error } from 'console';
 
 import Cookies from 'js-cookie';
 
@@ -16,7 +15,6 @@ api.interceptors.request.use((config) => {
         config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
-    return Promise.reject(error);
 });
 
 api.interceptors.response.use(

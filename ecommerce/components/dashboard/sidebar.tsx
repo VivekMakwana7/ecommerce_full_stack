@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import {
     LayoutDashboard,
+    Layers,
     ShoppingBag,
     Users,
     Settings,
@@ -21,6 +22,11 @@ const sidebarNavItems = [
         title: 'Dashboard',
         href: '/dashboard',
         icon: LayoutDashboard,
+    },
+    {
+        title: 'Categories',
+        href: '/dashboard/categories',
+        icon: Layers,
     },
     {
         title: 'Products',
