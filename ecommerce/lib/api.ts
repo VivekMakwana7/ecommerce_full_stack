@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { error } from 'console';
 
 import Cookies from 'js-cookie';
 
@@ -15,8 +16,20 @@ api.interceptors.request.use((config) => {
         config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
-}, (error) => {
     return Promise.reject(error);
 });
+
+api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && error.response.status === 401) {
+            Cookies.remove('token');
+            if (typeof window !== 'undefined' && !window.location.pathname.includes('/login')) {
+                window.location.href = '/login';
+            }
+        }
+        return Promise.reject(error);
+    }
+);
 
 export default api;
