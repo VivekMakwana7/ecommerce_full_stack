@@ -1,0 +1,1149 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 5,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 7,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
+		}
+	},
+	"records": [
+		{
+			"x": 654.6958530761426,
+			"y": 188.00889530935268,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:tK7ASFYbcJReA5rUrI3mx",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 838.3125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Android Phones, iPhones, Feature Phones, Phone Chargers & Cables"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a5cVJcYV",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 1130.6324198578807,
+			"y": 281.1906896504307,
+			"lastActivityTimestamp": 1765555935168,
+			"meta": {}
+		},
+		{
+			"x": 305.91639670466236,
+			"y": 184.84047357932457,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:XkP33B1SlEqiLVKk8UQLS",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 291.3625183105469,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Mobiles & Smartphones"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a2A9h3tV",
+			"typeName": "shape"
+		},
+		{
+			"x": 493.1341489131125,
+			"y": 65.38208697561473,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:VfMu6cY5hCTZij9paBeaq",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 60.86960686466392,
+					"y": -8.782190705996612
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aALGA8yV",
+			"typeName": "shape"
+		},
+		{
+			"x": 1130.6324198578807,
+			"y": 281.1906896504307,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Matsg9Enp2Apr0Ir6QSAJ",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 8,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aPVqc2DV",
+			"typeName": "shape"
+		},
+		{
+			"x": 1505.1558300224992,
+			"y": 51.50140559316432,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:nUlF3KPWip9T58EnV7NXT",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1815.2625732421875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Core Specs : Processor (e.g., Intel i5, AMD Ryzen 7, Apple M3), RAM (e.g., 8GB, 16GB, 32GB), Storage Type (SSD, HDD), Storage Size (e.g., 512GB SSD)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Display : Screen Size (e.g., 13.3\", 15.6\", 17\"), Resolution (e.g., Full HD, 4K)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Graphics : Dedicated GPU (e.g., NVIDIA RTX 4070), Integrated Graphics"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "OS : Operating System (e.g., Windows 11, macOS, ChromeOS)"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aL54dlVV",
+			"typeName": "shape"
+		},
+		{
+			"x": 916.2684453385593,
+			"y": 217.13735472186744,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JjsDbbYmOOZuGQ6VR8Nge",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 129.46250915527344,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Core Specs"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aEe7Eczl",
+			"typeName": "shape"
+		},
+		{
+			"x": 682.3489383368026,
+			"y": 99.10322338606045,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rGD9uRjZSXEUwynmKC56d",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 648.2625122070312,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Laptops, Desktop PCs, Gaming PCs, Monitors, Tablets"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a7XiJJ2V",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:F2EAdbvSMiRpcX4B9mogf",
+			"type": "arrow",
+			"fromId": "shape:nVbM9WJ3vaTVFxwnkRzgK",
+			"toId": "shape:rGD9uRjZSXEUwynmKC56d",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.0023357358881053586,
+					"y": 0.5280397562771411
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 713.008394588479,
+			"y": 599.2905820631089,
+			"z": 0.23464440725859295,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 1347.0514238191636,
+			"y": 114.842255597139,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-VTYJ0m9PUY-PUSDUxZ6l",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 157.73661420293797,
+					"y": 8.114317675325736
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aMl0GWQV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:BAzol1UGTLkVVM6SftXRG",
+			"type": "arrow",
+			"fromId": "shape:i1Qt34LYWQe7kXJRAUsPT",
+			"toId": "shape:tK7ASFYbcJReA5rUrI3mx",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.010882093517580665,
+					"y": 0.6003513224435116
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 319.33778451593287,
+			"y": 50.621593586111715,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:jxjINX1jBlvsW16Rf-48z",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 142.96250915527344,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Accessories"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a4vz91KG",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:JMbGLOf70-ODzNUBOcNsG",
+			"type": "arrow",
+			"fromId": "shape:VfMu6cY5hCTZij9paBeaq",
+			"toId": "shape:l9R5W8XaHHGix1qniYsIA",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.0017073574473134014,
+					"y": 0.4906534145742863
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"editingShapeId": "shape:Matsg9Enp2Apr0Ir6QSAJ",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:Matsg9Enp2Apr0Ir6QSAJ"
+			],
+			"hoveredShapeId": "shape:Matsg9Enp2Apr0Ir6QSAJ",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 906.7872717788013,
+			"y": 414.81349251836036,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:h9si75lXOmhDgvRExxXhb",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1283.125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Core Specs : "
+								},
+								{
+									"type": "text",
+									"text": "RAM (e.g., 4GB, 6GB, 8GB), Internal Storage (e.g., 64GB, 128GB, 256GB), Processor/Chipset"
+								},
+								{
+									"type": "hardBreak"
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Display : "
+								},
+								{
+									"type": "text",
+									"text": "Screen Size (e.g., 6.1\", 6.7\"), Display Type (e.g., AMOLED, LCD), Refresh Rate"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Camera : "
+								},
+								{
+									"type": "text",
+									"text": "Primary Camera Megapixels (e.g., 48MP, 108MP), Number of Rear Cameras"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "OS : "
+								},
+								{
+									"type": "text",
+									"text": "Operating System (e.g., Android 14, iOS 18)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Connectivity : "
+								},
+								{
+									"type": "text",
+									"text": "5G, Dual SIM, NFC"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aNJgnbzl",
+			"typeName": "shape"
+		},
+		{
+			"x": 918.7331695615675,
+			"y": 330.322182157024,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:OVJpIYjFg_AqQ25KbgRaR",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 0.3773959442547721,
+					"y": 61.51179604865547
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aDXgEPZV",
+			"typeName": "shape"
+		},
+		{
+			"x": 583.9843497936273,
+			"y": 113.83552744522262,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:nVbM9WJ3vaTVFxwnkRzgK",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 54.812926805963,
+					"y": 10.599190102726709
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a8I3vVUl",
+			"typeName": "shape"
+		},
+		{
+			"x": 906.6572479183893,
+			"y": 242.7716782658112,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:kaoeE3XXKHnVquPdULAYN",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 1.8868645562008624,
+					"y": 38.86945016551334
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aB8PZM3V",
+			"typeName": "shape"
+		},
+		{
+			"x": 610.3604250527669,
+			"y": 201.68780965807764,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:i1Qt34LYWQe7kXJRAUsPT",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 43.41895912305381,
+					"y": 6.776398784329956
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a639ZMpV",
+			"typeName": "shape"
+		},
+		{
+			"x": 554.912267028342,
+			"y": 40.70272488873354,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:l9R5W8XaHHGix1qniYsIA",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 886.8500366210938,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Headsets & Headphones, Power Banks, Phone Cases, Mouse & Keyboard"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a9SfxLdV",
+			"typeName": "shape"
+		},
+		{
+			"x": 896.6659210889851,
+			"y": -59.421258272781984,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:7CD0F95WvOxcqQvHGg07U",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 886.8500366210938,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Headsets & Headphones, Power Banks, Phone Cases, Mouse & Keyboard"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aOAOYykV",
+			"typeName": "shape"
+		},
+		{
+			"x": 899.1097896935859,
+			"y": 289.9703381077281,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GRZ3HNePBhtIi7YUR86Rj",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 129.10000610351562,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Attributes"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aCrzmAdG",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:7SUs-VbS0B_0RPmjvu9IL",
+			"type": "arrow",
+			"fromId": "shape:ecJnp7q2OB0QY7oYqbf8z",
+			"toId": "shape:l9R5W8XaHHGix1qniYsIA",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.43179834612454787,
+					"y": 0.14282345953612166
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 937.8526461018249,
+			"y": 45.33020519563519,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ecJnp7q2OB0QY7oYqbf8z",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 0.5148654856379835,
+					"y": -56.11692068573859
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a9uPb4c8",
+			"typeName": "shape"
+		},
+		{
+			"x": 311.0201870280997,
+			"y": 105.09366763894323,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Qm5bkKL5HTH4uxN4zkk9D",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 257.51251220703125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Laptops & Computers"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a3uOJgCV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:geo": "ellipse"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 936,
+				"h": 416
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.25,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"meta": {},
+			"id": "binding:VErLqwC_EnzJnvMX8BPbb",
+			"type": "arrow",
+			"fromId": "shape:-VTYJ0m9PUY-PUSDUxZ6l",
+			"toId": "shape:nUlF3KPWip9T58EnV7NXT",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.007426408200354405,
+					"y": 0.42506579166881453
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 101.76457690443698,
+			"y": 105.73164447147187,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PPYNojlNxMnhtmxymk1vU",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 96.13750457763672,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Product"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a1pWjSgV",
+			"typeName": "shape"
+		}
+	]
+}

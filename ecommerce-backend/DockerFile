@@ -1,0 +1,42 @@
+# ------------------------------------------------------------------
+# Stage 1: Build Stage (Installs deps and compiles TypeScript)
+# ------------------------------------------------------------------
+FROM node:20-alpine AS builder
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy dependency files (for better caching)
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Compile NestJS application (creates the 'dist' folder)
+RUN npm run build
+
+# ------------------------------------------------------------------
+# Stage 2: Production Stage (Runs the built application)
+# ------------------------------------------------------------------
+FROM node:20-alpine AS production
+
+# Set the working directory
+WORKDIR /app
+
+# Only copy production dependencies from package.json
+COPY package.json package-lock.json ./
+RUN npm install --omit=dev
+
+# Copy the built application code from the builder stage
+COPY --from=builder /app/dist ./dist
+
+# Copy package files (including prisma schema if used for client generation)
+COPY --from=builder /app/prisma ./prisma
+# Ensure Prisma Client is generated for the final image
+RUN npx prisma generate --schema=./prisma/schema.prisma
+
+# Start the production server
+CMD ["node", "dist/main"]
