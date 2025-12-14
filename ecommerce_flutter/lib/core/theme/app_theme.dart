@@ -113,6 +113,7 @@ final ThemeData appTheme = ThemeData.light(useMaterial3: true).copyWith(
   ),
   filledButtonTheme: FilledButtonThemeData(
     style: ButtonStyle(
+      fixedSize: const WidgetStatePropertyAll(Size.fromHeight(52)),
       backgroundColor: WidgetStateProperty.all<Color>(_primaryColor),
       foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
     ),

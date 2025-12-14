@@ -59,7 +59,7 @@ Future<void> _initialization() async {
 
   //  Initialize API client with base URL and interceptors
   ApiClient.initialize(
-    baseUrl: 'http:localhost:3000/',
+    baseUrl: 'http://192.168.1.7:3000/',
     interceptors: [DioNetworkInterceptor()],
   );
 }

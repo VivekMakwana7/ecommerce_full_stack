@@ -1,25 +1,33 @@
 import 'package:flutter/foundation.dart' show immutable;
 
-/// ApiException class for all exceptions
+/// Represents an exception that occurs during an API call.
+///
+/// This class is used to encapsulate the error information returned from the API,
+/// including the status code, message, and any additional data.
 @immutable
 class ApiException {
-  /// Constructor
-  const ApiException({required this.code, required this.message, this.data, this.lisData});
+  /// Creates an instance of [ApiException].
+  const ApiException({
+    required this.code,
+    required this.message,
+    this.data,
+    this.lisData,
+  });
 
-  /// Status code
+  /// The HTTP status code of the error response.
   final int code;
 
-  /// Status message
+  /// The error message returned from the API.
   final String message;
 
-  /// data in error response
+  /// Any additional data returned in the error response, as a map.
   final Map<String, dynamic>? data;
 
-  /// data in error response
+  /// Any additional data returned in the error response, as a list.
   final List<dynamic>? lisData;
 
   @override
   String toString() {
-    return 'ApiException(code: $code, message: $message , data:$data, lisData:$lisData)';
+    return 'ApiException(code: $code, message: $message, data: $data, lisData: $lisData)';
   }
 }

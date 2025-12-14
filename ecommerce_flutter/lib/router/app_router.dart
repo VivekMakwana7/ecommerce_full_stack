@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/core/db/app_db.dart';
 import 'package:ecommerce_flutter/router/route_path.dart';
 import 'package:ecommerce_flutter/src/home/home_page.dart';
 import 'package:ecommerce_flutter/src/login/login_page.dart';
@@ -9,7 +10,13 @@ import 'package:go_router/go_router.dart';
 /// corresponding screens. The initial route is set to the login page.
 final appRouter = GoRouter(
   // The initial route that the app will display.
-  initialLocation: RoutePath.login,
+  initialLocation: RoutePath.home,
+  redirect: (context, state) {
+    if (AppDB.instance.token == null) {
+      return RoutePath.login;
+    }
+    return null;
+  },
   // The list of routes that the app can navigate to.
   routes: [
     // The route for the home page.

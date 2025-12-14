@@ -1,6 +1,16 @@
 part of 'login_cubit.dart';
 
 @immutable
-sealed class LoginState {}
+final class LoginState {
+  LoginState({this.apiState = ApiState.initial, this.errorMessage});
 
-final class LoginInitial extends LoginState {}
+  final ApiState apiState;
+  final String? errorMessage;
+
+  LoginState copyWith({ApiState? apiState, String? errorMessage}) {
+    return LoginState(
+      apiState: apiState ?? this.apiState,
+      errorMessage: errorMessage ?? this.errorMessage,
+    );
+  }
+}

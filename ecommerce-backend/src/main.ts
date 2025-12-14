@@ -14,6 +14,6 @@ async function bootstrap() {
   app.useGlobalInterceptors(new TransformInterceptor());
   // Common error handling
   app.useGlobalFilters(new HttpExceptionFilter());
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3000, '0.0.0.0');
 }
 bootstrap();

@@ -2,6 +2,8 @@
 /// for local data storage using Hive. It follows a singleton pattern to ensure
 /// a single instance of the database is used throughout the application.
 
+import 'package:ecommerce_flutter/core/db/models/user.dart';
+import 'package:ecommerce_flutter/hive/hive_registrar.g.dart';
 import 'package:hive_ce/hive.dart';
 import 'package:hive_ce_flutter/adapters.dart';
 import 'package:path_provider/path_provider.dart';
@@ -46,6 +48,7 @@ class AppDB {
   /// recreating the database directory if necessary.
   static Future<void> initialize() async {
     await Hive.initFlutter();
+    Hive.registerAdapters();
     // Prevent re-initialization if the instance already exists.
     if (_instance != null) {
       return;
@@ -83,4 +86,10 @@ class AppDB {
   /// This operation is asynchronous and returns a [Future] that completes
   /// when the data is successfully saved.
   Future<void> setValue<T>(String key, T value) => _box.put(key, value);
+
+  User? get user => getValue<User?>('user');
+  set user(User? value) => setValue('user', value);
+
+  String? get token => getValue<String?>('token');
+  set token(String? value) => setValue('token', value);
 }
