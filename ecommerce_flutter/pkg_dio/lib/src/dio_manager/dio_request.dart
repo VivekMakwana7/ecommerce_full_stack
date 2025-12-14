@@ -26,8 +26,14 @@ class DioRequest<T> {
     this.receiveProgress,
     this.sendProgress,
     this.hideKeyboard = true,
-  }) : assert(jsonMapper != null || listJsonMapper != null, 'Provide at least one json mapper!'),
-       assert(jsonMapper == null || listJsonMapper == null, 'Can not provide both json mapper!');
+  }) : assert(
+         jsonMapper != null || listJsonMapper != null,
+         'Provide at least one json mapper!',
+       ),
+       assert(
+         jsonMapper == null || listJsonMapper == null,
+         'Can not provide both json mapper!',
+       );
 
   /// Dio instance
   final Dio dio;
@@ -81,7 +87,9 @@ class DioRequest<T> {
     if (hideKeyboard) FocusManager.instance.primaryFocus?.unfocus();
     try {
       if (cancelToken?.isCancelled ?? false) {
-        return const ApiResult.error(exception: ApiException(code: -1, message: 'Request Cancelled'));
+        return const ApiResult.error(
+          exception: ApiException(code: -1, message: 'Request Cancelled'),
+        );
       }
       final response = await dio.request<dynamic>(
         path,
@@ -92,49 +100,38 @@ class DioRequest<T> {
         onReceiveProgress: receiveProgress,
         onSendProgress: sendProgress,
       );
-      /*final response = await Isolate.run(
-        () {
-          return dio.request<dynamic>(
-            path,
-            options: (options ?? Options())..method = method,
-            queryParameters: params,
-            data: data,
-            cancelToken: cancelToken,
-            onReceiveProgress: receiveProgress,
-          );
-        },
-      );*/
       return _responseHandler(response);
     } on DioException catch (ex, st) {
-      // Logger().e(ex.type);
-      // Logger().e(ex.message);
-      // Logger().e(ex.response?.statusCode);
-      // 'path $path'.logFatal;
-      // 'data $data'.logFatal;
-      // '${ex.response?.statusCode}'.logFatal;
-      // '${ex.response?.data}'.logFatal;
-      // '${ex.error}'.logFatal;
       st.logE;
       return ApiResult.error(exception: ex.toApiException);
     } on Object catch (ex, st) {
       st.logE;
-      return ApiResult.error(exception: ApiException(code: -1, message: ex.toString()));
+      return ApiResult.error(
+        exception: ApiException(code: -1, message: ex.toString()),
+      );
     }
   }
 
   Future<ApiResult<T>> _responseHandler(Response<dynamic> response) async {
     if (response.data != null) {
-      final apiResponse = ApiResponse.fromJson(response.data as Map<String, dynamic>);
+      final apiResponse = ApiResponse.fromJson(
+        response.data as Map<String, dynamic>,
+      );
 
       if (apiResponse.code == 0) {
         return ApiResult.error(
-          exception: ApiException(code: apiResponse.code, message: apiResponse.message),
+          exception: ApiException(
+            code: apiResponse.code,
+            message: apiResponse.message ?? '',
+          ),
         );
       }
-      if (T == ApiResponse && ((response.data as Map<String, dynamic>?)?.isNotEmpty ?? false)) {
+      if (T == ApiResponse &&
+          ((response.data as Map<String, dynamic>?)?.isNotEmpty ?? false)) {
         final data = jsonMapper!.call(response.data as Map<String, dynamic>);
         return ApiResult.success(data: data);
-      } else if (apiResponse.data is Map<String, dynamic> && jsonMapper != null) {
+      } else if (apiResponse.data is Map<String, dynamic> &&
+          jsonMapper != null) {
         final data = jsonMapper!.call(apiResponse.data as Map<String, dynamic>);
         return ApiResult.success(data: data);
       } else if (apiResponse.data is List<dynamic> && listJsonMapper != null) {
@@ -142,12 +139,18 @@ class DioRequest<T> {
         return ApiResult.success(data: data);
       } else {
         return ApiResult.error(
-          exception: ApiException(code: response.statusCode ?? -1, message: 'No jsonMapper provided'),
+          exception: ApiException(
+            code: response.statusCode ?? -1,
+            message: 'No jsonMapper provided',
+          ),
         );
       }
     } else {
       return ApiResult.error(
-        exception: ApiException(code: response.statusCode ?? -1, message: 'Response not found!'),
+        exception: ApiException(
+          code: response.statusCode ?? -1,
+          message: 'Response not found!',
+        ),
       );
     }
   }

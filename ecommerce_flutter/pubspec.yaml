@@ -16,6 +16,8 @@ dependencies:
   logger: ^2.6.2
   hive_ce_flutter: ^2.3.3
   go_router: ^17.0.1
+  pkg_dio:
+    path: pkg_dio
 
 dev_dependencies:
   flutter_test:
