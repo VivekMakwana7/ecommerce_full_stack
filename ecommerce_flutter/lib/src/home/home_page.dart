@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-/// Home page
+/// The main screen of the application, displayed after successful login.
+///
+/// This page currently shows a simple centered text widget, but it is intended
+/// to be the primary interface for users to interact with the app's features.
 class HomePage extends StatelessWidget {
-  /// Default constructor
+  /// Creates the [HomePage] widget.
   const HomePage({super.key});
 
   @override

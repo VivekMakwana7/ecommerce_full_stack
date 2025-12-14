@@ -111,6 +111,26 @@ final ThemeData appTheme = ThemeData.light(useMaterial3: true).copyWith(
       foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
     ),
   ),
+  filledButtonTheme: FilledButtonThemeData(
+    style: ButtonStyle(
+      backgroundColor: WidgetStateProperty.all<Color>(_primaryColor),
+      foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+    ),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(18),
+      borderSide: const BorderSide(color: _tertiaryTextColor),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(18),
+      borderSide: const BorderSide(color: _tertiaryTextColor),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(18),
+      borderSide: const BorderSide(color: _primaryColor, width: 2),
+    ),
+  ),
 );
 
 /// Extension on [ThemeData] to provide easy access to the [AppColor] extension.

@@ -7,24 +7,39 @@ import 'package:ecommerce_flutter/core/logger.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-/// Bootstrap the app with Firebase and other configurations before running the app.
+/// Initializes and configures the application before it runs.
+///
+/// This function sets up global error handling, initializes app services,
+/// and runs the app within a zoned guard to catch uncaught asynchronous errors.
+///
+/// - [builder]: A function that returns the root widget of the application.
 Future<void> bootstrap({required Widget Function() builder}) async {
-  // Flutter unhandled error handling
+  // Set up a global error handler for Flutter framework errors.
   FlutterError.onError = (details) {
+    // Log the exception and stack trace for debugging.
     details.exceptionAsString().logE;
     details.stack.logE;
   };
 
+  // Run the application within a zoned guard to catch all uncaught errors
+  // from within the Flutter framework and asynchronous operations.
   unawaited(
     runZonedGuarded(
       () async {
-        // Set up Bloc observer for debugging state changes
+        // In debug mode, set up a Bloc observer to log state changes.
         if (kDebugMode) Bloc.observer = const AppBlocObserver();
+
+        // Ensure that Flutter widgets are initialized before running the app.
         WidgetsFlutterBinding.ensureInitialized();
+
+        // Perform essential asynchronous initializations.
         await _initialization();
+
+        // Run the application with the provided root widget.
         runApp(builder());
       },
       (error, stack) {
+        // Log any uncaught errors from the zoned guard.
         error.logE;
         stack.logE;
       },
@@ -32,9 +47,15 @@ Future<void> bootstrap({required Widget Function() builder}) async {
   );
 }
 
+/// Performs asynchronous initializations required by the app.
+///
+/// This function is called during the bootstrap process to set up services
+/// like the local database before the app starts.
 Future<void> _initialization() async {
+  // Initialize the local database.
   await AppDB.initialize();
 
+  // // TODO: Uncomment and configure API client when ready.
   // // Initialize API client with base URL and interceptors
   // ApiClient.initialize(
   //   baseUrl: '${AppEnv.instance.baseUrl}/',
