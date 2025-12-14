@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:ecommerce_flutter/core/app_bloc_observer.dart';
 import 'package:ecommerce_flutter/core/db/app_db.dart';
+import 'package:ecommerce_flutter/core/dio_network_interceptor.dart';
 import 'package:ecommerce_flutter/core/logger.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:pkg_dio/pkg_dio.dart';
 
 /// Initializes and configures the application before it runs.
 ///
@@ -55,10 +57,9 @@ Future<void> _initialization() async {
   // Initialize the local database.
   await AppDB.initialize();
 
-  // // TODO: Uncomment and configure API client when ready.
-  // // Initialize API client with base URL and interceptors
-  // ApiClient.initialize(
-  //   baseUrl: '${AppEnv.instance.baseUrl}/',
-  //   interceptors: [DioNetworkInterceptor()],
-  // );
+  //  Initialize API client with base URL and interceptors
+  ApiClient.initialize(
+    baseUrl: 'http:localhost:3000/',
+    interceptors: [DioNetworkInterceptor()],
+  );
 }
