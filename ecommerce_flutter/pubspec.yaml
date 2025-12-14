@@ -10,6 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  hive_ce: ^2.15.1
+  path_provider: ^2.1.5
+  bloc: ^9.1.0
+  logger: ^2.6.2
+  hive_ce_flutter: ^2.3.3
 
 dev_dependencies:
   flutter_test:
