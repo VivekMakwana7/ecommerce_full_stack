@@ -299,3 +299,304 @@ curl -X DELETE http://localhost:3000/users/2 \
   "affected": 1
 }
 ```
+
+---
+
+## 4. Products Module
+
+### Create Product
+**Endpoint:** `POST /products`
+
+**cURL Request (Multipart):**
+```bash
+curl -X POST http://localhost:3000/products \
+  -H "Content-Type: multipart/form-data" \
+  -F "name=Red T-Shirt" \
+  -F "description=High quality cotton t-shirt" \
+  -F "price=19.99" \
+  -F "color=Red,Blue" \
+  -F "size=L,XL" \
+  -F "quantity=100" \
+  -F "categoryId=1" \
+  -F "subCategoryId=2" \
+  -F "image=@/path/to/your/image.png"
+```
+
+**Dummy Response:**
+```json
+{
+  "name": "Red T-Shirt",
+  "description": "High quality cotton t-shirt",
+  "price": 19.99,
+  "color": ["Red", "Blue"],
+  "size": ["L", "XL"],
+  "quantity": 100,
+  "image": "http://localhost:3000/uploads/image-1710940000000-123.png",
+  "category": {
+    "id": 1,
+    "name": "Men"
+  },
+  "subCategory": {
+    "id": 2,
+    "name": "T-Shirts"
+  },
+  "id": 1
+}
+```
+
+### Get All Products
+**Endpoint:** `GET /products`
+
+**cURL Request:**
+```bash
+curl -X GET http://localhost:3000/products
+```
+
+**Dummy Response:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Red T-Shirt",
+    "description": "High quality cotton t-shirt",
+    "price": "19.99",
+    "color": ["Red", "Blue"],
+    "size": ["L", "XL"],
+    "quantity": 100,
+    "image": "http://localhost:3000/uploads/image-1710940000000-123.png",
+    "category": { "id": 1, "name": "Men" },
+    "subCategory": { "id": 2, "name": "T-Shirts" }
+  }
+]
+```
+
+### Get One Product
+**Endpoint:** `GET /products/:id`
+
+**cURL Request:**
+```bash
+curl -X GET http://localhost:3000/products/1
+```
+
+### Update Product
+**Endpoint:** `PATCH /products/:id`
+
+**cURL Request:**
+```bash
+curl -X PATCH http://localhost:3000/products/1 \
+  -H "Content-Type: multipart/form-data" \
+  -F "price=24.99" \
+  -F "quantity=50"
+```
+
+### Delete Product
+**Endpoint:** `DELETE /products/:id`
+
+**cURL Request:**
+```bash
+curl -X DELETE http://localhost:3000/products/1
+```
+
+---
+
+## 5. Orders Module (Protected)
+
+**Note:** These endpoints require authentication. Replace `<ACCESS_TOKEN>` with the token received from the Login API.
+
+### Create Order
+**Endpoint:** `POST /orders`
+
+**cURL Request:**
+```bash
+curl -X POST http://localhost:3000/orders \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -d '{
+    "shippingAddress": "123 Main St, New York, NY 10001",
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 2,
+        "size": "L",
+        "color": "Red"
+      },
+      {
+        "productId": 2,
+        "quantity": 1,
+        "size": "M",
+        "color": "Blue"
+      }
+    ]
+  }'
+```
+
+**Dummy Response:**
+```json
+{
+  "user": {
+    "id": 1,
+    "email": "user@example.com",
+    "role": "user"
+  },
+  "shippingAddress": "123 Main St, New York, NY 10001",
+  "status": "PENDING",
+  "transactionId": null,
+  "totalAmount": 59.97,
+  "orderItems": [
+    {
+      "product": {
+        "id": 1,
+        "name": "Red T-Shirt",
+        "price": 19.99,
+        "quantity": 98
+      },
+      "quantity": 2,
+      "price": 19.99,
+      "size": "L",
+      "color": "Red",
+      "id": 1
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Blue Jeans",
+        "price": 19.99,
+        "quantity": 49
+      },
+      "quantity": 1,
+      "price": 19.99,
+      "size": "M",
+      "color": "Blue",
+      "id": 2
+    }
+  ],
+  "id": 1,
+  "createdAt": "2024-03-20T14:00:00.000Z",
+  "updatedAt": "2024-03-20T14:00:00.000Z"
+}
+```
+
+### Get All Orders
+**Endpoint:** `GET /orders`
+
+**cURL Request:**
+```bash
+curl -X GET http://localhost:3000/orders \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+**Dummy Response:**
+```json
+[
+  {
+    "id": 1,
+    "totalAmount": "59.97",
+    "status": "PENDING",
+    "transactionId": null,
+    "shippingAddress": "123 Main St, New York, NY 10001",
+    "createdAt": "2024-03-20T14:00:00.000Z",
+    "updatedAt": "2024-03-20T14:00:00.000Z",
+    "user": {
+      "id": 1,
+      "email": "user@example.com",
+      "name": "Test User"
+    },
+    "orderItems": [
+      {
+        "id": 1,
+        "quantity": 2,
+        "price": "19.99",
+        "size": "L",
+        "color": "Red",
+        "product": {
+          "id": 1,
+          "name": "Red T-Shirt",
+          "image": "http://localhost:3000/uploads/image.png"
+        }
+      }
+    ]
+  }
+]
+```
+
+### Get One Order
+**Endpoint:** `GET /orders/:id`
+
+**cURL Request:**
+```bash
+curl -X GET http://localhost:3000/orders/1 \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+**Dummy Response:**
+```json
+{
+  "id": 1,
+  "totalAmount": "59.97",
+  "status": "PENDING",
+  "transactionId": null,
+  "shippingAddress": "123 Main St, New York, NY 10001",
+  "createdAt": "2024-03-20T14:00:00.000Z",
+  "updatedAt": "2024-03-20T14:00:00.000Z",
+  "user": {
+    "id": 1,
+    "email": "user@example.com",
+    "name": "Test User"
+  },
+  "orderItems": [
+    {
+      "id": 1,
+      "quantity": 2,
+      "price": "19.99",
+      "size": "L",
+      "color": "Red",
+      "product": {
+        "id": 1,
+        "name": "Red T-Shirt",
+        "description": "High quality cotton t-shirt",
+        "image": "http://localhost:3000/uploads/image.png"
+      }
+    },
+    {
+      "id": 2,
+      "quantity": 1,
+      "price": "19.99",
+      "size": "M",
+      "color": "Blue",
+      "product": {
+        "id": 2,
+        "name": "Blue Jeans",
+        "description": "Comfortable denim jeans",
+        "image": "http://localhost:3000/uploads/image2.png"
+      }
+    }
+  ]
+}
+```
+
+### Update Payment Status
+**Endpoint:** `POST /orders/payment`
+
+**cURL Request (Success):**
+```bash
+curl -X POST http://localhost:3000/orders/payment \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -d '{
+    "orderId": 1,
+    "transactionId": "txn_123456789",
+    "status": "success"
+  }'
+```
+
+**cURL Request (Failure):**
+```bash
+curl -X POST http://localhost:3000/orders/payment \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -d '{
+    "orderId": 1,
+    "transactionId": "txn_failed_123",
+    "status": "failure"
+  }'
+```
