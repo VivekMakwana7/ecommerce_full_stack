@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/core/db/app_db.dart';
 import 'package:ecommerce_flutter/router/route_path.dart';
+import 'package:ecommerce_flutter/src/bottom_nav/bottom_nav_page.dart';
 import 'package:ecommerce_flutter/src/home/home_page.dart';
 import 'package:ecommerce_flutter/src/login/login_page.dart';
 import 'package:go_router/go_router.dart';
@@ -20,16 +21,28 @@ final appRouter = GoRouter(
   // The list of routes that the app can navigate to.
   routes: [
     // The route for the home page.
-    GoRoute(
-      path: RoutePath.home,
-      name: RoutePath.home,
-      builder: (context, state) => const HomePage(),
-    ),
+
     // The route for the login page.
     GoRoute(
       path: RoutePath.login,
       name: RoutePath.login,
       builder: (context, state) => const LoginPage(),
+    ),
+    StatefulShellRoute.indexedStack(
+      builder: (context, state, navigationShell) {
+        return BottomNavPage(child: navigationShell);
+      },
+      branches: [
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: RoutePath.home,
+              name: RoutePath.home,
+              builder: (context, state) => const HomePage(),
+            ),
+          ],
+        ),
+      ],
     ),
   ],
 );
