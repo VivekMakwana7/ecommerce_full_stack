@@ -1,8 +1,10 @@
 import 'package:ecommerce_flutter/core/db/app_db.dart';
 import 'package:ecommerce_flutter/router/route_path.dart';
 import 'package:ecommerce_flutter/src/bottom_nav/bottom_nav_page.dart';
+import 'package:ecommerce_flutter/src/cart/cart_page.dart';
 import 'package:ecommerce_flutter/src/home/home_page.dart';
 import 'package:ecommerce_flutter/src/login/login_page.dart';
+import 'package:ecommerce_flutter/src/profile/profile_page.dart';
 import 'package:go_router/go_router.dart';
 
 /// The main router configuration for the application.
@@ -39,6 +41,24 @@ final appRouter = GoRouter(
               path: RoutePath.home,
               name: RoutePath.home,
               builder: (context, state) => const HomePage(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: RoutePath.cart,
+              name: RoutePath.cart,
+              builder: (context, state) => const CartPage(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: RoutePath.profile,
+              name: RoutePath.profile,
+              builder: (context, state) => const ProfilePage(),
             ),
           ],
         ),

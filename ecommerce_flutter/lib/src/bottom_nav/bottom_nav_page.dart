@@ -14,7 +14,7 @@ class BottomNavPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: child,
-      bottomNavigationBar: const AppBottomNavigationBar(),
+      bottomNavigationBar: AppBottomNavigationBar(child: child),
     );
   }
 }
